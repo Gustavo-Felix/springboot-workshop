@@ -59,5 +59,4 @@ public class UserService {
         entity.setPhone(newUser.getPhone());
     }
 
-
 }
