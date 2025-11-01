@@ -1,4 +1,4 @@
-# Course - Sistema de Gerenciamento de Pedidos
+# WorkShop - Sistema de Gerenciamento de Pedidos
 
 Aplicação Spring Boot para gerenciamento de pedidos e-commerce, desenvolvida com arquitetura em camadas e REST API.
 
@@ -100,14 +100,68 @@ mvn clean package
 
 O arquivo será gerado em `target/course-0.0.1-SNAPSHOT.jar`
 
-## 🔧 Endpoints REST
+## 🔧 Endpoints REST API
 
-A API expõe os seguintes recursos:
-- `/users` - Gerenciamento de usuários
-- `/products` - Gerenciamento de produtos
-- `/categories` - Gerenciamento de categorias
-- `/orders` - Gerenciamento de pedidos
-- `/order-items` - Gerenciamento de itens de pedido
+### Base URL
+```
+http://localhost:8080
+```
+
+### 📋 Usuários (`/users`)
+
+| Método | Endpoint | Código de Resposta |
+|--------|----------|---------------------|
+| GET | `/users` | `200 OK` |
+| GET | `/users/{id}` | `200 OK` |
+| POST | `/users` | `201 Created` |
+| PUT | `/users/{id}` | `200 OK` |
+| DELETE | `/users/{id}` | `204 No Content` |
+
+### 📦 Produtos (`/products`)
+
+| Método | Endpoint | Código de Resposta |
+|--------|----------|---------------------|
+| GET | `/products` | `200 OK` |
+| GET | `/products/{id}` | `200 OK` |
+| POST | `/products` | `201 Created` |
+| PUT | `/products/{id}` | `200 OK` |
+| DELETE | `/products/{id}` | `204 No Content` |
+
+### 🏷️ Categorias (`/categories`)
+
+| Método | Endpoint | Código de Resposta |
+|--------|----------|---------------------|
+| GET | `/categories` | `200 OK` |
+| GET | `/categories/{id}` | `200 OK` |
+| POST | `/categories` | `201 Created` |
+| PUT | `/categories/{id}` | `200 OK` |
+| DELETE | `/categories/{id}` | `204 No Content` |
+
+### 📝 Pedidos (`/orders`)
+
+| Método | Endpoint | Código de Resposta |
+|--------|----------|---------------------|
+| GET | `/orders` | `200 OK` |
+| GET | `/orders/{id}` | `200 OK` |
+| POST | `/orders` | `201 Created` |
+| PUT | `/orders/{id}` | `200 OK` |
+| DELETE | `/orders/{id}` | `204 No Content` |
+
+### 🛒 Itens de Pedido (`/orderitem`)
+
+| Método | Endpoint | Código de Resposta |
+|--------|----------|---------------------|
+| GET | `/orderitem` | `200 OK` |
+
+### 📊 Status de Pedido (OrderStatus)
+
+| Código | Status           | Descrição              |
+|--------|------------------|------------------------|
+| 1      | WAITING_PAYMENT  | Aguardando pagamento   |
+| 2      | PAID             | Pago                   |
+| 3      | SHIPPED          | Enviado                |
+| 4      | DELIVERED        | Entregue               |
+| 5      | CANCELED         | Cancelado              |
 
 ## 📝 Estrutura do Projeto
 
