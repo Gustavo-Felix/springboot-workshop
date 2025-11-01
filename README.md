@@ -7,8 +7,8 @@ Aplicação Spring Boot para gerenciamento de pedidos e-commerce, desenvolvida c
 - **Java 21**
 - **Spring Boot 3.5.6**
 - **Spring Data JPA / Hibernate**
-- **PostgreSQL** (produção)
-- **H2 Database** (desenvolvimento/teste)
+- **PostgreSQL** (desenvolvimento)
+- **H2 Database** (teste)
 - **Docker & Docker Compose**
 - **Maven**
 
@@ -66,7 +66,7 @@ O banco PostgreSQL será iniciado automaticamente na porta `5432`.
 ### Pré-requisitos
 - Java 21
 - Maven 3.6+
-- PostgreSQL (ou H2 para desenvolvimento)
+- PostgreSQL (ou H2 para teste)
 
 ### Configuração
 
@@ -146,12 +146,6 @@ http://localhost:8080
 | POST | `/orders` | `201 Created` |
 | PUT | `/orders/{id}` | `200 OK` |
 | DELETE | `/orders/{id}` | `204 No Content` |
-
-### 🛒 Itens de Pedido (`/orderitem`)
-
-| Método | Endpoint | Código de Resposta |
-|--------|----------|---------------------|
-| GET | `/orderitem` | `200 OK` |
 
 ### 📊 Status de Pedido (OrderStatus)
 
